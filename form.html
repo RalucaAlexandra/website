@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Example Form</title>
+<link rel="stylesheet" type="text/css" href="form-style.css"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</head>
+
+<body>
+	<nav>
+		<a href="index.html#home" class="logo">LOGO</a>
+		<ul>
+			<li><a href="index.html#home" class="home">Home</a></li>
+			<li><a href="index.html#aboutme">About me</a></li>
+			<li><a href="index.html#projects">Projects</a></li>
+			<li><a href="cv.html">CV</a></li>
+			<li><a href="form.html">Example Form</a></li>
+			<li><a href="index.html#contact">Contact me</a></li>
+		</ul>
+	</nav>
+
+	<div class="wrapper">
+		<h1>Adaugă anunț</h1>
+		<br>
+		<div id="error_message"></div>
+		<form id="myform" onsubmit="return validation()" method="post">
+			<h2 class="title">Titlu:</h2>
+			<div class="input-field">
+				<input class="titlename" type="text" name="title_name" id="titlu">
+			</div>
+			
+			<h2 class="name">Categorie:</h2>
+			<select class="option" name="categorie">
+				<option disabled="disabled" selected="selected">Alege o categorie</option>
+				<option>Apartamente</option>
+				<option>Garsoniere</option>
+				<option>Case</option>
+			</select>
+
+			<h2 class="name">Preț:</h2>
+			<div class="input-field">
+				<input type="number" class="price" name="price" id="price">
+				<select class="option" name="moneda">
+					<option disabled="disabled" selected="selected">Alege moneda</option>
+					<option>LEI</option>
+					<option>EURO</option>
+			</select> <br>
+			<br>
+			&nbsp;&nbsp;<h>Negociabil:</h>&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="yes" value="Da" id="da">Da
+			<input type="radio" name="no" value="Nu" id="nu">Nu<br>
+			<br>
+			</div>
+
+			<h2 class="name">Camere:</h2>
+			<select class="option" name="camere">
+				<option disabled="disabled" selected="selected">Alege camere</option>
+					<option>1 cameră</option>
+					<option>2 camere</option>
+					<option>3 camere</option>
+					<option>4 sau mai multe</option>
+			</select>
+		    <br>
+
+			<h2 class="name">Suprafață utilă:</h2>
+			<div class="input-field">
+				<input type="number" class="suprafata" name="suprafata" id="suprafata"> m<sup>2</sup>
+			</div>
+			<h2 class="name">Persoană fizică sau firmă:</h2>
+			<select class="option" name="persoana">
+				<option disabled="disabled" selected="selected">Alege</option>
+					<option>Persoană fizică</option>
+					<option>Firmă</option>
+			</select>
+			<br>
+
+			<h2 class="name">Descriere:</h2>
+			<textarea id="message" name="message" placeholder="Descriere"></textarea>
+
+			<h2 class="name">Fotografii</h2>
+				<input type="file" id="file" accept="image/*" hidden="hidden" multiple>
+				<label class="photo-label" for="file">
+					<i class="material-icons">add_photo_alternate</i> &nbsp;
+					Alege fișierul
+				</label>
+
+			<h2 class="name">Orașul sau localitatea:</h2>
+			<select class="option" name="oras">
+				<option disabled="disabled" selected="selected">Alege orașul</option>
+					<option>Timișoara</option>
+					<option>Bucuresti</option>
+					<option>Cluj</option>
+					<option>Brașov</option>
+			</select> <br>
+
+			<h2 class="name">Persoană de contact:</h2>
+			<div class="input-field">
+				<input type="text" name="Nume" placeholder="Nume" id="name">
+		    </div>
+
+			<h2 class="name">Email:</h2>
+			<div class="input-field">
+				<input type="text" name="Email" placeholder="Email" id="email">
+			</div>
+
+			<h2 class="name">Telefon:</h2>
+			<div class="input-field">
+				<input type="tel" name="telefon" placeholder="Număr de telefon" id="tel">
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="btn">
+				<input type="submit" name="submitButton" value="Adauga anunt">
+			</div>
+		</form>
+	</div>
+	<div class="a-social-b">
+		<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		<a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+		<a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+	</div>
+</body>
+</html>
